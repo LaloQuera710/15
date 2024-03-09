@@ -1,0 +1,42 @@
+instalar la app python
+
+poner el iPhone en modo recovery para ponerle el checkra1n
+
+luego abrir tcprelay.py con abrir con python launcher
+abritra 2 terminales terminal 1
+
+
+Last login: Wed Nov 27 15:10:54 on ttys000
+MacBook-Air-de-oo:~ oo$ cd '/Users/oo/Desktop/carpeta sin título/' && '/usr/bin/pythonw'  '/Users/oo/Desktop/carpeta sin título/tcprelay.py'  && echo Exit status: $? && exit 1
+Usage: tcprelay.py [OPTIONS] [Host:]RemotePort[:LocalPort] [[Host:]RemotePort[:LocalPort]]...
+
+Options:
+  -h, --help            show this help message and exit
+  -t, --threaded        use threading to handle multiple connections at once
+  -b KILOBYTES, --bufsize=KILOBYTES
+                        specify buffer size for socket forwarding
+  -s PATH, --socket=PATH
+                        specify the path of the usbmuxd socket
+  -u UDID, --udid=UDID  specify the device's udid if multiple devices are
+                        connected
+MacBook-Air-de-oo:carpeta sin título oo$ 
+
+
+Copia esto en la primera terminal 1: 
+./tcprelay.py -t 44:2222
+
+Pega este en la segunda ventana de terminal:
+ssh root@localhost -p 2222
+
+luego responder con yes y enter
+
+de ahí pedirá contraseña es password es alpine
+
+luego seguir uno por uno la siguiente secuencia de comandos
+
+
+cd /var
+
+cd mobile/Library/Accounts
+
+cat Accounts3.sqlite-wal
